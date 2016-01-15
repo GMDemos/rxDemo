@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.concurrent.TimeUnit;
 
 import rx.Observable;
@@ -56,7 +57,9 @@ public class MainActivity extends AppCompatActivity {
 
     String searchWikipedia(String term) {
         try {
-            URL url = new URL("https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=" + term);
+            URL url = new URL("https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=" +
+                                       URLEncoder.encode(term, "UTF-8"));
+
             BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
             String inputLine;
             StringBuilder out = new StringBuilder();
