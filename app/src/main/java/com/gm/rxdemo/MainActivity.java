@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
                          *  Complete this function by call searchWikipedia
                          *  pass return JSON string to onNext function
                          * */
-                        String result = "CALL searchWikipedia here";
+                        String result =  searchWikipedia(s.toString());
                         subscriber.onNext(result);
                         subscriber.onCompleted();
                     }
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
                          * TODO:
                          * set string to the textView
                          * */
-
+                         ((TextView) findViewById(R.id.TextView1)).setText(s);
                             }
                         });
 
