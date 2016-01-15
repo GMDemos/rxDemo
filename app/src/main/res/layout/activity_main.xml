@@ -14,16 +14,8 @@
         android:id="@+id/editText1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@+id/button1"
         android:hint="General Motors"
         android:singleLine="true" />
-<Button
-    android:id="@id/button1"
-    android:text="Search"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentRight="true" />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_below="@id/editText1"
